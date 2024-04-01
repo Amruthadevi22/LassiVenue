@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <style>
+        /* General styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2; 
+        }
+        header {
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+         header nav ul li a {
+            font-size: 16px; /* Set initial font size */
+            transition: font-size 0.3s; /* Add smooth transition effect */
+        }
+
+        header nav ul li a:hover {
+            font-size: 18px; /* Increase font size on hover */
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            bottom: 0;
+        }
+        footer a img {
+            width: 20px; /* Set initial width */
+            margin: 0 5px; /* Add some spacing between icons */
+            transition: transform 0.3s; /* Add smooth transition effect */
+        }
+
+        footer a img:hover {
+            transform: scale(1.1); /* Increase size on hover */
+        }
+        /* Responsive styles */
+        #home {
+            background-image: url('Images/background.png');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        #home img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 65%;
+            width: 290px;
+            height: auto;
+            animation: fall 3s infinite;
+            opacity: 0;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(-50vh);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0%);
+                opacity: 1;
+            }
+        }
+        #leaves {
+            position: absolute;
+            top: 40%;
+            left: 80%;
+            width: 20%;
+            animation: floatAnimation 2s infinite alternate;
+        }
+        @keyframes floatAnimation {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        title {
+            position: absolute;
+            top: 40%;
+            left: 40%;
+            width: 20%;
+            animation: floatAnimation 2s infinite alternate;
+        }
+        #products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding-top: 100px;
+        }
+        #products img {
+            width: 30%; /* Set initial width */
+            margin: 10px; /* Add some spacing between images */
+            transition: transform 0.3s; /* Add smooth transition effect */
+        }
+
+        #products img:hover {
+            transform: scale(1.1); /* Increase size on hover */
+        }
+        /* Media queries for responsiveness */
+        @media only screen and (max-width: 768px) {
+            /* Adjust styles for screens smaller than 768px (tablets and phones) */
+            header {
+                padding: 10px;
+            }
+            nav ul li {
+                margin-left: 10px;
+            }
+            #home {
+                height: 50vh;
+            }
+            #home img {
+                width: 150px;
+                left: 50%;
+            }
+            #leaves {
+                width: 15%;
+            }
+            title {
+                left: 30%;
+            }
+            #products img {
+                width: 80%; /* Adjust image width for smaller screens */
+            }
+        }
+        
+        .slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div>
+        <img src="Images/logo.png" alt="Logo" style="height: 50px;">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+	
+    <section id="home">
+	
+        <div>
+		<img src="" id="image1">
+        <img src="" id="image2" >
+        <img src="" id="image3" >
+         <img src="" id="image4" >
+		</div>
+    </section>
+<img src="Images/lev1.png" alt="Leaves" id="leaves" width="20%">
+<img src="Images/lev2.png" alt="Leaves" id="leaves" width="20%">
+
+    <section>
+        
+        <div class="slideshow-container">
+  <div class="slide fade">
+    <center><img src="Images/free.png" style="height:100%"></center>
+  </div>
+
+  <div class="slide fade">
+   <center> <img src="Images/shop.jpg" style="height:100%"></center>
+  </div>
+
+</div>
+        
+        
+       <center><h2>Your Favorite's</h2></center>
+<div  id="products" style="padding-top: 100px;">
+<img src="Images/full.jpg" width="50%" height="80%">
+<img src="Images/dbc.png" width="50%">
+<img src="Images/all (2).jpg" width="50%"> 
+<img src="Images/oreoo.webp" width="15%" height="70%">
+<img src="Images/pexels-photo-6025810.webp" width="20%">
+
+<img src="Images/green.webp" width="22%">
+<img src="Images/full1.jpg" width="50%">
+<img src="Images/ice.jpg" width="50%">
+</div>
+    </section>
+    
+    <section id="menu" style="padding-top: 100px;">
+        <center><h2>Let's Select our Favourite</h2></center>
+       <img src="Images/menu.jpg">
+    </section>
+    
+    <section id="about" style="padding-top: 100px;">
+        <center><h2>About Us</h2></center>
+        <img src="Images/aboutus2.png" width="100%">
+        <img src="Images/aboutus.png" width="100%">
+    </section>
+
+  <section>
+	   <center><h2>Let's Connect</h2></center>
+    <div  id="contact" style="padding-top: 100px; display: flex;">
+		<div class="map-container" style="flex: 1;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4623.892272017877!2d77.69736913145601!3d12.95812594893336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae138ff5e7daf9%3A0x48706ce722485216!2sSreee%20Subramanyeswara%20pg%20for%20ladies!5e0!3m2!1sen!2sin!4v1710320616173!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div style="background-color: #f2f2f2; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); flex: 1;">
+        <form id="contact-form" style="font-family: Arial, sans-serif;">
+        <input type="text" id="name" name="name" placeholder="Your Name" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;"><br>
+        
+        <input type="email" id="email" name="email" placeholder="Your Email" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;" required><br>
+        
+        <input type="tel" id="number" name="number" placeholder="Your Phone Number" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;" required><br>
+        
+        <input type="text" id="address" name="address" placeholder="Your Address" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;"><br>
+        
+        <textarea id="message" name="message" rows="4" placeholder="Your Message" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;" required></textarea><br>
+        
+        <input type="submit" value="Send Message" style="width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+    </form>
+</div>
+	</div>
+
+  
+    </section>
+</main>
+
+<footer>
+    <p>Connect with us:</p>
+    <a href="https://www.instagram.com/your_instagram_username"><img src="download-removebg-preview (1).png" alt="Instagram" width="20" height="auto"></a>
+    <a href="https://wa.me/9110805390"><img src="download-removebg-preview.png" alt="WhatsApp" width="20" height="auto"></a>
+    <a href="https://www.facebook.com/your_facebook_page"><img src="download-removebg-preview (3).png" alt="Facebook" width="20" height="auto"></a>
+    <a href="https://www.youtube.com/your_youtube_channel"><img src="download-removebg-preview (2).png" alt="YouTube" width="20" height="auto"></a>
+ <br><br> <div class="copyright">
+    &copy; 2024 LassiVenue. All Rights Reserved.
+  </div>
+</footer>
+
+<script>
+    // Change images one by one every 3 seconds
+    const images = ["Images/lassi.png", "Images/oreo.png", "Images/db.png", "Images/falooda.png"];
+    let index = 0;
+
+    function changeImage() {
+        const img1 = document.getElementById('image1');
+        const img2 = document.getElementById('image2');
+        const img3 = document.getElementById('image3');
+
+        img1.src = "";
+        img1.style.opacity = '0'; // Hide the first image
+        img2.src = "";
+        img2.style.opacity = '0'; // Hide the second image
+        img3.src = "";
+        img3.style.opacity = '0'; // Hide the third image
+
+        img1.src = images[index % images.length]; // Modulo operator for looping through images array
+        img1.style.opacity = '1'; // Show the current image
+
+        index++; // Move to the next image for the next iteration
+
+        setTimeout(changeImage, 3000); // Change images every 3 seconds
+    }
+
+    // Start changing images
+    changeImage();
+    var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("slide");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+
+</script>
+
+
+</body>
+</html>
