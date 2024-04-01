@@ -6,7 +6,7 @@
     <title>Your Website</title>
     <style>
         /* General styles */
-       body {
+        body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
@@ -14,7 +14,7 @@
         }
         header {
             background-color: rgba(255, 255, 255, 0.5);
-            padding: 10px; /* Adjusted padding */
+            padding: 20px;
             position: fixed;
             width: 100%;
             top: 0;
@@ -27,19 +27,22 @@
             list-style-type: none;
             margin: 0;
             padding: 0;
-            display: flex;
         }
         nav ul li {
-            margin-left: 10px; /* Adjusted margin */
+            display: inline;
+            margin-left: 20px;
         }
         nav ul li a {
             text-decoration: none;
             color: #333;
-            font-size: 14px; /* Adjusted font size */
-            transition: font-size 0.3s;
         }
+         header nav ul li a {
+            font-size: 16px; /* Set initial font size */
+            transition: font-size 0.3s; /* Add smooth transition effect */
+        }
+
         header nav ul li a:hover {
-            font-size: 16px; /* Adjusted font size on hover */
+            font-size: 18px; /* Increase font size on hover */
         }
         footer {
             background-color: #333;
@@ -63,7 +66,7 @@
             background-image: url('Images/background.png');
             background-size: cover;
             background-position: center;
-            min-height: 100vh;
+            height: 70vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -76,7 +79,7 @@
             top: 0;
             right: 0;
             left: 65%;
-            max-width: 50%; /* Adjusted max-width */
+            width: 290px;
             height: auto;
             animation: fall 3s infinite;
             opacity: 0;
@@ -138,20 +141,15 @@
             header {
                 padding: 10px;
             }
-             header {
-                padding: 10px;
-            }
             nav ul li {
-                margin-left: 5px; /* Further adjusted margin */
+                margin-left: 10px;
             }
             #home {
                 height: 50vh;
             }
-             #home img {
-                width: 100%; /* Set image width to 100% for smaller screens */
-                max-width: none; /* Remove max-width restriction */
-                left: 50%; /* Center the image horizontally */
-                transform: translateX(-50%); /* Center the image horizontally */
+            #home img {
+                width: 150px;
+                left: 50%;
             }
             #leaves {
                 width: 15%;
@@ -243,7 +241,7 @@
 <img src="Images/oreoo.webp" width="15%" height="70%">
 <img src="Images/pexels-photo-6025810.webp" width="20%">
 
-<img src="green.webp" width="22%">
+<img src="Images/green.webp" width="22%">
 <img src="Images/full1.jpg" width="50%">
 <img src="Images/ice.jpg" width="50%">
 </div>
